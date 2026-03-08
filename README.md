@@ -307,8 +307,8 @@ Built with [Recharts](https://recharts.org).
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [your-linkedin](https://linkedin.com/in/your-linkedin)
+- GitHub: https://github.com/Priproking-444pritam
+- LinkedIn: www.linkedin.com/in/pritam-acharya-2b52a2250
 
 ---
 
