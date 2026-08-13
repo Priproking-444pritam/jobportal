@@ -3,6 +3,13 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { uploadToCloudinary } from "../utils/cloudinary.js";
 
+const cookieOptions = {
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+  httpOnly: true,
+  sameSite: "none",
+  secure: true,
+};
+
 // REGISTER
 export const register = async (req, res) => {
   try {
@@ -67,11 +74,7 @@ export const login = async (req, res) => {
     };
     return res
       .status(200)
-      .cookie("token", token, {
-        maxAge: 7 * 24 * 60 * 60 * 1000,
-        httpOnly: true,
-        sameSite: "strict",
-      })
+      .cookie("token", token, cookieOptions)
       .json({ message: `Welcome back, ${user.fullname}`, user, success: true });
   } catch (error) {
     console.error(error);
@@ -82,7 +85,7 @@ export const login = async (req, res) => {
 // LOGOUT
 export const logout = async (req, res) => {
   try {
-    return res.status(200).cookie("token", "", { maxAge: 0 }).json({
+    return res.status(200).cookie("token", "", { ...cookieOptions, maxAge: 0 }).json({
       message: "Logged out successfully",
       success: true,
     });

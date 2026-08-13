@@ -76,7 +76,7 @@ const Navbar = () => {
 
           {/* Right */}
           <div className="hidden md:flex items-center gap-2">
-            {/* Dark mode toggle */}
+            {/* Dark mode toggle — Moon = go dark, Sun = go light */}
             <button onClick={toggleTheme}
               className="w-9 h-9 flex items-center justify-center rounded-xl text-gray-500 hover:text-purple-600 hover:bg-purple-50 dark:text-gray-400 dark:hover:text-purple-400 dark:hover:bg-purple-900/30 transition">
               {isDark ? <Sun size={17} /> : <Moon size={17} />}
