@@ -49,6 +49,10 @@ const Navbar = () => {
   ];
   const links = user?.role === "recruiter" ? recruiterLinks : studentLinks;
 
+  // isDark=true means currently DARK → show Sun icon to switch to light
+  // isDark=false means currently LIGHT → show Moon icon to switch to dark
+  const ThemeIcon = isDark ? Sun : Moon;
+
   return (
     <nav className="bg-white/95 dark:bg-gray-950/95 backdrop-blur-lg border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50 shadow-sm transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -76,10 +80,10 @@ const Navbar = () => {
 
           {/* Right */}
           <div className="hidden md:flex items-center gap-2">
-            {/* Dark mode toggle — Moon = go dark, Sun = go light */}
             <button onClick={toggleTheme}
-              className="w-9 h-9 flex items-center justify-center rounded-xl text-gray-500 hover:text-purple-600 hover:bg-purple-50 dark:text-gray-400 dark:hover:text-purple-400 dark:hover:bg-purple-900/30 transition">
-              {isDark ? <Sun size={17} /> : <Moon size={17} />}
+              className="w-9 h-9 flex items-center justify-center rounded-xl text-gray-500 hover:text-purple-600 hover:bg-purple-50 dark:text-gray-400 dark:hover:text-purple-400 dark:hover:bg-purple-900/30 transition"
+              title={isDark ? "Switch to light mode" : "Switch to dark mode"}>
+              <ThemeIcon size={17} />
             </button>
 
             {!user ? (
@@ -155,7 +159,7 @@ const Navbar = () => {
           <div className="flex items-center gap-2 md:hidden">
             <button onClick={toggleTheme}
               className="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 transition">
-              {isDark ? <Sun size={17} /> : <Moon size={17} />}
+              <ThemeIcon size={17} />
             </button>
             <button onClick={() => setMenuOpen(!menuOpen)} className="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
               {menuOpen ? <X size={20} className="dark:text-white" /> : <Menu size={20} className="dark:text-white" />}

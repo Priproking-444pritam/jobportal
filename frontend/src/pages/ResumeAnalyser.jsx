@@ -195,7 +195,7 @@ const ResumeAnalyser = () => {
             {file && !loading && (
               <button onClick={analyse}
                 className="w-full mt-4 py-3.5 bg-gradient-to-r from-purple-600 to-violet-500 text-white font-bold rounded-xl hover:from-purple-700 hover:to-violet-600 transition-all shadow-sm shadow-purple-200 flex items-center justify-center gap-2 text-sm">
-                <Sparkles size={16} /> Analyse with Claude AI →
+                <Sparkles size={16} /> Analyse Resume →
               </button>
             )}
 
