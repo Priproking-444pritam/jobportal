@@ -140,9 +140,6 @@ const ResumeAnalyser = () => {
 
         {/* Header */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 bg-purple-50 dark:bg-purple-900/30 border border-purple-100 dark:border-purple-800 text-purple-700 dark:text-purple-300 text-xs font-semibold px-4 py-2 rounded-full mb-4">
-            <Sparkles size={13} /> Powered by Claude AI
-          </div>
           <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
             AI Resume <span className="gradient-text">Analyser</span>
           </h1>
