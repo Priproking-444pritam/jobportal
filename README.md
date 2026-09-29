@@ -303,7 +303,7 @@ Built with [Recharts](https://recharts.org).
 - Environment variables never committed (`.gitignore`)
 
 ---
-
+.
 ## 👨‍💻 Author
 
 **Your Name**
