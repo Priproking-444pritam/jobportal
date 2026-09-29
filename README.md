@@ -1,4 +1,4 @@
-# 🚀 JobPortal — Full Stack MERN Job Portal
+#   JobPortal — Full Stack MERN Job Portal
 
 <div align="center">
 
